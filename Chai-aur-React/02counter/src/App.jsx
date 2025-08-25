@@ -17,7 +17,7 @@ function App() {
 
   return (
     <>
-      <h1>Chai Aur React</h1>
+      <h1>Lendi Awasthi aur code</h1>
       <h2>Counter value:</h2>
 
       <button onClick={addValue}>Add Value {Counter}</button>
