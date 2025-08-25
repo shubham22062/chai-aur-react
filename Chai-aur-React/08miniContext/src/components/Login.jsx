@@ -18,6 +18,7 @@ function Login() {
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
                 placeholder="username"
+                // there is no backend
             />
             {" "}
             <input
