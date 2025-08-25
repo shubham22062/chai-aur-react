@@ -7,7 +7,7 @@ function App() {
   
 
   return (
-    <h1>Chai-aur-React | Shubham Awasthi</h1>
+    <h1>Chai-aur-React | Awasthi Lendi</h1>
   )
 }
 
