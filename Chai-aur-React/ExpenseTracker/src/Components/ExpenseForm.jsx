@@ -6,8 +6,19 @@ export default function ExpenseForm({ addExpense }) {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    if (!title || !amount) return
-    addExpense({ id: Date.now(), title, amount })
+
+    if (!title.trim() || !amount || parseFloat(amount) <= 0) {
+      alert("Please enter a valid title and amount")
+      return
+    }
+
+    addExpense({
+      id: Date.now(),
+      title: title.trim(),
+      amount: parseFloat(amount),
+      date: new Date().toLocaleDateString()
+    })
+
     setTitle("")
     setAmount("")
   }
@@ -23,7 +34,7 @@ export default function ExpenseForm({ addExpense }) {
           placeholder="Expense Title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          className="w-full p-2 border rounded-lg"
+          className="w-full p-2 border rounded-lg text-gray-900"
         />
       </div>
       <div className="mb-3">
@@ -32,12 +43,12 @@ export default function ExpenseForm({ addExpense }) {
           placeholder="Amount"
           value={amount}
           onChange={(e) => setAmount(e.target.value)}
-          className="w-full p-2 border rounded-lg"
+          className="w-full p-2 border rounded-lg text-gray-900"
         />
       </div>
       <button
         type="submit"
-        className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition"
+        className="w-full bg-blue-500 text-grey py-2 rounded-lg hover:bg-blue-600 transition"
       >
         Add Expense
       </button>
