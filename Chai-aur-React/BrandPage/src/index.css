@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gray-dark: #120C0C;
+  --color-gray-light: #A6A6A5;
+  --color-accent-orange: #C63108;
+  --color-accent-gold: #D59945;
+
+  --font-pixel: "Press Start 2P", cursive;
+}
