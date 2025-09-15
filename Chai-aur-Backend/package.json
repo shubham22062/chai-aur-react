@@ -1,0 +1,16 @@
+{
+  "name": "01basics",
+  "version": "1.0.0",
+  "description": "this is my first backend",
+  "license": "ISC",
+  "author": "Shubham",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0"
+  }
+}
